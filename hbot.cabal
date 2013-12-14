@@ -1,0 +1,39 @@
+-- The name of the package.
+name:                hbot
+
+-- The package version.  See the Haskell package versioning policy (PVP)
+-- for standards guiding when and how versions should be incremented.
+-- http://www.haskell.org/haskellwiki/Package_versioning_policy
+-- PVP summary:      +-+------- breaking API changes
+--                   | | +----- non-breaking API additions
+--                   | | | +--- code changes with no API change
+version:             0.1.0.0
+synopsis:            simple trading bot for the kraken currency exchange.
+-- description:
+license:             MIT
+license-file:        LICENSE
+author:              Johan Anderholm
+maintainer:          Johan Anderholm
+homepage:            https://github.com/Fulkerson/HBot
+bug-reports:         https://github.com/Fulkerson/HBot/issues
+copyright:           (c) 2011, 2012, 2013 Johan Anderholm
+build-type:          Simple
+cabal-version:       >=1.8
+
+
+executable hbot
+  -- .hs or .lhs file containing the Main module.
+  main-is: HBot.hs
+
+  -- Modules included in this executable, other than Main.
+  -- other-modules:
+
+  -- Other library packages from which modules are imported.
+  build-depends:       base == 4.6.*,
+                       aeson >= 0.6.2.1,
+                       text >= 1.0.0.0,
+                       bytestring,
+                       http-conduit,
+                       time,
+                       unordered-containers
+
